@@ -74,7 +74,7 @@ def register(request):
         login(request, user)
         data = {"userName": username, "status": "Authenticated"}
         return JsonResponse(data)
-    else :
+    else:
         data = {"userName": username, "error": "Already Registered"}
         return JsonResponse(data)
 
@@ -94,7 +94,6 @@ def get_cars(request):
             }
         )
     return JsonResponse({"CarModels": cars})
-
 
 
 def get_dealerships(request, state="All"):
